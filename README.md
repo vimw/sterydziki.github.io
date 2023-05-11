@@ -1,2 +1,0 @@
-# sterydziki.github.io
-s
