@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Xavier Lechowski">
+    <link rel="icon" href="./imgs/favicon.png" sizes="128x128">
+    <link rel="stylesheet" href="style.css">
+    <title>Valorant</title>
+</head>
+<body>
+    <header>
+        <div style="text-align: left;">
+            <img src="./imgs/logo.png" alt="logo" style="height: 10rem; position: relative; top: 1rem; left: 1rem;">
+        </div>
+        <div>
+            <h1>Valorant</h1>
+        </div>
+        <div>
+            <span class="mobilki"><input type="checkbox" id="navi" checked><label for="navi"><img src="./imgs/menu.png" alt="menu" style="height: 6rem; position: relative; top: 30%;" class="centr"></label></span>
+        </div>
+    </header>
+
+    <hr>
+
+    <nav>
+        <input type="radio" name="pindex" id="glowna_b" checked>
+        <label for="glowna_b">Główna</label>
+        <input type="radio" name="pindex" id="agenci_b">
+        <label for="agenci_b">Agenci</label>
+        <input type="radio" name="pindex" id="mapy_b">
+        <label for="mapy_b">Mapy</label>
+        <!-- <input type="radio" name="pindex" id="bronie_b">
+        <label for="bronie_b">Bronie</label> -->
+        <input type="radio" name="pindex" id="turnieje_b">
+        <label for="turnieje_b">Turnieje</label>
+    </nav>
+
+    <div id="glowna_container" class="container">
+        <div class="container_header">
+            <img class="banner_image" src="./imgs/banery/banner1.png" alt="baner">
+            <div class="banner_title">
+                <p>O grze</p>
+            </div>
+        </div>
+        <section>
+            <h2>Valorant czyli...</h2>
+            <p>To gra 2-drużynowa, w formacie 5v5 w głównym trybie gry. Jest to darmowa strzelanka od Riot games. Niepolecam w nia grać bo jest strasznie dużo głupich osób w niej i powoduje to problemy. I tak ta gra jest lepsza od lola więc zachęcam do obejrzenia najnowszego trailera:</p>
+            <div style="text-align: center;">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qYJJGcaXyqY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <hr class="container_seperator">
+            <h2>Rozgrywka</h2>
+            <p>Domyślny tryb Valoranta dzieli drużyny na atakujących i broniących. Atakująćy muszą podłożyć bombe nazywaną "Spike'iem", a obrońcy muszą ją rozbroić lub niepozwolić na podłożenie go. Domyślnie runda w valorancie jest rozgrywana w 135 sekund. 30 sekund kupowania, 100 sekund rozgrywki i 5 sekund przerwy. Drużyny zamieniają się miejscami po 12 rundach, a pierwsza drużyna która osiągnie 13 rund wygranych - wygrywa całą grę.</p>
+            <div class="galeria">
+                <img class="imedz" src="./imgs/glowna/rozgrywka1.png" alt="rozgrywka">
+                <img class="imedz" src="./imgs/glowna/rozgrywka2.png" alt="rozgrywka">
+                <img class="imedz" src="./imgs/glowna/rozgrywka3.png" alt="rozgrywka">
+            </div>
+            <hr class="container_seperator">
+            <h2>Tryby gry:</h2>
+            <ul>
+                <li>Rankingowa</li>
+                <li>Nierankingowa</li>
+                <li>Spike rush</li>
+                <li>Deathmatch</li>
+                <li>Swift play</li>
+                <li>Eskalacja</li>
+                <li>Custom game</li>
+            </ul>
+            <p>Rankingowa i nierankigowe gry się niczym nie różnią oprócz rangi. Więcej o tym poczytasz w <span style="text-decoration: underline;">Turnieje</span>. Swift play to uproszczona wersja składająca się z 4 rund na połowę / skraca czas grania. Spike rush to inny tryb który posiada tylko 3 rundy na połowę. Każdy gracz otrzymuje tą samą broń (czytaj więcej w <span style="text-decoration: underline;">Bronie</span>) oraz może podnosić power up'y. Deathmatch to FFA w którym wygrywa osoba, która jako pierwsza osiągnie 40 zabójstw. Eskalacja to teamowy Deathmatch, w którym obie drużyny mają te same bronie z lekkim twistem. Po kilku zabójstwach druzyna dostaje kolejną broń. Custom Game pozwala nam na granie tworzonych przez nas gier (z różnymi zasadami). Wykorzystywane jest to między innymi w turniejach.</p>
+        </section>
+    </div>
+
+    <div id="agenci_containter" class="container">
+        <div class="container_header">
+            <img class="banner_image" src="./imgs/banery/banner4.png" alt="baner">
+            <div class="banner_title">
+                <p>Agenci</p>
+            </div>
+        </div>
+        <div class="agent_select">
+            <img src="./imgs/agents/agent_select_bg.png" alt="agent_select_bg" id="agent_select_bg">
+            <div id="agents">
+                <input type="radio" name="aindex" id="astra_b">
+                <label for="astra_b"><img src="./imgs/agents/astra_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="breach_b">
+                <label for="breach_b"><img src="./imgs/agents/breach_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="brimstone_b">
+                <label for="brimstone_b"><img src="./imgs/agents/brimstone_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="chamber_b">
+                <label for="chamber_b"><img src="./imgs/agents/chamber_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="cypher_b">
+                <label for="cypher_b"><img src="./imgs/agents/cypher_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="fade_b">
+                <label for="fade_b"><img src="./imgs/agents/fade_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="gekko_b">
+                <label for="gekko_b"><img src="./imgs/agents/gekko_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="harbor_b">
+                <label for="harbor_b"><img src="./imgs/agents/harbor_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="jett_b" checked>
+                <label for="jett_b"><img src="./imgs/agents/jett_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="kayo_b">
+                <label for="kayo_b"><img src="./imgs/agents/kayo_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="killjoy_b">
+                <label for="killjoy_b"><img src="./imgs/agents/killjoy_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="neon_b">
+                <label for="neon_b"><img src="./imgs/agents/neon_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="omen_b">
+                <label for="omen_b"><img src="./imgs/agents/omen_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="phoenix_b">
+                <label for="phoenix_b"><img src="./imgs/agents/phoenix_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="raze_b">
+                <label for="raze_b"><img src="./imgs/agents/raze_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="reyna_b">
+                <label for="reyna_b"><img src="./imgs/agents/reyna_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="sage_b">
+                <label for="sage_b"><img src="./imgs/agents/sage_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="skye_b">
+                <label for="skye_b"><img src="./imgs/agents/skye_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="sova_b">
+                <label for="sova_b"><img src="./imgs/agents/sova_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="viper_b">
+                <label for="viper_b"><img src="./imgs/agents/viper_icon.png" alt="agent"></label>
+                <input type="radio" name="aindex" id="yoru_b">
+                <label for="yoru_b"><img src="./imgs/agents/yoru_icon.png" alt="agent"></label>
+            </div>
+            <div id="agent">
+                <img src="./imgs/agents/astra_pick.png" alt="agent" class="astra_agent">
+                <img src="./imgs/agents/breach_pick.png" alt="agent" class="breach_agent">
+                <img src="./imgs/agents/brimstone_pick.png" alt="agent" class="brimstone_agent">
+                <img src="./imgs/agents/chamber_pick.png" alt="agent" class="chamber_agent">
+                <img src="./imgs/agents/cypher_pick.png" alt="agent" class="cypher_agent">
+                <img src="./imgs/agents/fade_pick.png" alt="agent" class="fade_agent">
+                <img src="./imgs/agents/gekko_pick.png" alt="agent" class="gekko_agent">
+                <img src="./imgs/agents/harbor_pick.png" alt="agent" class="harbor_agent">
+                <img src="./imgs/agents/jett_pick.png" alt="agent" class="jett_agent">
+                <img src="./imgs/agents/kayo_pick.png" alt="agent" class="kayo_agent">
+                <img src="./imgs/agents/killjoy_pick.png" alt="agent" class="killjoy_agent">
+                <img src="./imgs/agents/neon_pick.png" alt="agent" class="neon_agent">
+                <img src="./imgs/agents/omen_pick.png" alt="agent" class="omen_agent">
+                <img src="./imgs/agents/phoenix_pick.png" alt="agent" class="phoenix_agent">
+                <img src="./imgs/agents/raze_pick.png" alt="agent" class="raze_agent">
+                <img src="./imgs/agents/reyna_pick.png" alt="agent" class="reyna_agent">
+                <img src="./imgs/agents/sage_pick.png" alt="agent" class="sage_agent">
+                <img src="./imgs/agents/skye_pick.png" alt="agent" class="skye_agent">
+                <img src="./imgs/agents/sova_pick.png" alt="agent" class="sova_agent">
+                <img src="./imgs/agents/viper_pick.png" alt="agent" class="viper_agent">
+                <img src="./imgs/agents/yoru_pick.png" alt="agent" class="yoru_agent">
+            </div>
+            <!-- <div id="agent_name">
+                <div class="astra_agent">
+                    <h2>Astra</h2>
+                    <p>Controller</p>
+                </div>
+                <div class="breach_agent">
+                    <h2>Breach</h2>
+                    <p>Initiator</p>
+                </div>
+                <div class="brimstone_agent">
+                    <h2>Brimstone</h2>
+                    <p>Controller</p>
+                </div>
+                <div class="chamber_agent">
+                    <h2>Chamber</h2>
+                    <p>Sentinel</p>
+                </div>
+                <div class="cypher_agent">
+                    <h2>Cypher</h2>
+                    <p>Sentinel</p>
+                </div>
+                <div class="fade_agent">
+                    <h2>Fade</h2>
+                    <p>Initiator</p>
+                </div>
+                <div class="gekko_agent">
+                    <h2>Gekko</h2>
+                    <p>Initiator</p>
+                </div>
+                <div class="harbor_agent">
+                    <h2>Harbor</h2>
+                    <p>Controller</p>
+                </div>
+                <div class="jett_agent">
+                    <h2>Jett</h2>
+                    <p>Duelist</p>
+                </div>
+                <div class="kayo_agent">
+                    <h2>KAY/O</h2>
+                    <p>Initiator</p>
+                </div>
+                <div class="killjoy_agent">
+                    <h2>Killjoy</h2>
+                    <p>Sentinel</p>
+                </div>
+                <div class="neon_agent">
+                    <h2>Neon</h2>
+                    <p>Duelist</p>
+                </div>
+                <div class="omen_agent">
+                    <h2>Omen</h2>
+                    <p>Controller</p>
+                </div>
+                <div class="phoenix_agent">
+                    <h2>Phoenix</h2>
+                    <p>Duelist</p>
+                </div>
+                <div class="raze_agent">
+                    <h2>Raze</h2>
+                    <p>Duelist</p>
+                </div>
+                <div class="reyna_agent">
+                    <h2>Reyna</h2>
+                    <p>Duelist</p>
+                </div>
+                <div class="sage_agent">
+                    <h2>Sage</h2>
+                    <p>Sentinel</p>
+                </div>
+                <div class="skye_agent">
+                    <h2>Skye</h2>
+                    <p>Initiator</p>
+                </div>
+                <div class="sova_agent">
+                    <h2>Sova</h2>
+                    <p>Initiator</p>
+                </div>
+                <div class="viper_agent">
+                    <h2>Viper</h2>
+                    <p>Controller</p>
+                </div>
+                <div class="yoru_agent">
+                    <h2>Yoru</h2>
+                    <p>Duelist</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div id="mapy_container" class="container">
+        <div class="container_header">
+            <img class="banner_image" src="./imgs/banery/banner3.png" alt="baner">
+            <div class="banner_title">
+                <p>Mapy</p>
+            </div>
+        </div>
+        <div class="ukladmap">
+            <div class="map">
+                <img src="./imgs/maps/the_range.png" alt="mapa">
+                <div>
+                    <p><strong>The Range</strong> to prosta strzelnica, dostępna nawet w lobby. Nie zagramy na niej podczas normalnych meczy. Zawiera w sobie ćwiczenie aima oraz scenario podkładania i rozbrajania spike'a.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/ascent.png" alt="mapa">
+                <div>
+                    <p><strong>Ascent</strong> był jedną z pierwszych map. Zawiera on 2 punkty, oraz wielki środek. Mapa według fabuły znajduje się gdzieś w wenecji/ włoszech.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/haven.png" alt="mapa">
+                <div>
+                    <p><strong>Haven</strong> to pierwsza mapa w Valorancie. O dziwo zawierała ona aż 3 punkty. Mapa ma także wiele ścian, które można wallbangować. Charakteryzuje się 1 prostym wejściem na oraz 1 zakręconym wejściem na każdy punkt. Według fabuły znajduje się w Butanie.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/bind.png" alt="mapa">
+                <div>
+                    <p><strong>Bind</strong> to także jedna z pierwszych map. Ta mapa nie zawiera środka, lecz są portale - z A main do B main oraz z B long na A long. Tak jak Haven ta mapa ma 2 wejścia na site. Dłuższe i krótsze. Według fabuły znajduje się w Maroko.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/split.png" alt="mapa">
+                <div>
+                    <p><strong>Split</strong> to ostatnia mapa zapakowana podczas wyjścia gry. Była pierwszą wyłączoną mapą z rotacji rankingowej, oraz zawiera linki do poruszania się w górę i dół. jest to bardzo futurystyczna mapa, która zawiera też 2 wejścia na punkt, lecz z maina lub mida. Ta mapa znajduje się w Japonii.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/icebox.png" alt="mapa">
+                <div>
+                    <p><strong>Icebox</strong> był pierwszą dodaną mapą do Valoranta. Wzięła ona od Splita linki do poruszania się, lecz dodali także poziomą - z B maina na punkt. Na początku mapa mierzyła się z wielką krytyką, lecz teraz już jest akceptowana przez społeczność. O dziwo z mida mamy 2 wejścia na site, a więc daje to nam łącznie 3 wejścia na pojedyńczy punkt. Mapa znajduje się według fabuły w Rosji.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/breeze.png" alt="mapa">
+                <div>
+                    <p><strong>Breeze</strong> to kolejna mapa dodana po Iceboxie, która zdecydowanie spotkała się z większą falą krytyki. Przed zmianami punkt B był niemożliwy do zaatakowania - był niebem snajperów. Z drugiem strony na punkcie A można było chować się w ponad 10 miejscach. Po zmianach breeze i tak jest nielubianą mapą, ze względu na swoją otwartość. Według fabuły znajduje się w Trójkącie Bermudzkim.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/fracture.png" alt="mapa">
+                <div>
+                    <p><strong>Fracture</strong> to kolejna mapa z kolejną dziwną mechaniką. Wejścia na punkt są 2 - są one przeciwne do siebie. Spawn atakujących rozkłada się na 2 części mapy, które są dostępne poprzez długą linkę. Spawn obrońców znajduje się dokładnie na środku tej linki nad nią. Według fabuły mapa znajduje się w Stanach Zjednoczonych.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/pearl.png" alt="mapa">
+                <div>
+                    <p><strong>Pearl</strong> to także niedawno dodana mapa. Pomimo dużej krytyki (przynajmniej z początku) mi się podoba. Jest o wiele bardziej pozakręcana niż wszystkie, jest nawet podział - B jest zamknięte, A jest otwarte. Duża ilość zakrętów zdecydowanie zmienia wiele strategii, gdyż trzeba uważać na każde kąty. Według fabuły ta mapa znajduje się w Portugalii.</p>
+                </div>
+            </div>
+            <div class="map">
+                <img src="./imgs/maps/lotus.png" alt="mapa">
+                <div>
+                    <p><strong>Lotus</strong> to najnowsza mapa Valorant. Tak jak Haven ma także 3 punkty. W dodatku widzimy mechaniki zakręcanych drzwi, oraz niszczonych - ich już się nie da zamknąć po zniszczeniu. Mapa ta znajduje się gdzieś w Indiach.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="bronie_container" class="container">
+        <div class="container_header">
+            <img class="banner_image" src="./imgs/banery/banner5.png" alt="baner">
+            <div class="banner_title">
+                <p>Bronie</p>
+            </div>
+        </div>
+        <div class="bronie">
+            <div class="tytul">
+                <h2>Pistolety</h2>
+            </div>
+            <div id="pistole">
+                <div>
+                    <h4>Classic</h4>
+                    <img src="./imgs/bronie/classic.png" alt="bron">
+                    <p>Cena: 0$</p>
+                    <p>Darmowa bron dostępna dla każdego.</p>
+                </div>
+                <div>
+                    <h4>Shorty</h4>
+                    <img src="./imgs/bronie/shorty.png" alt="bron">
+                    <p>Cena: 150$</p>
+                    <p>Broń skuteczna, na krótki dystans.</p>
+                </div>
+                <div>
+                    <h4>Frenzy</h4>
+                    <img src="./imgs/bronie/frenzy.png" alt="bron">
+                    <p>Cena: 450$</p>
+                    <p>Szybkostrzelna broń.</p>
+                </div>
+                <div>
+                    <h4>Classic</h4>
+                    <img src="./imgs/bronie/ghost.png" alt="bron">
+                    <p>Cena: 500$</p>
+                    <p>Wyciszona, szybka broń.</p>
+                </div>
+                <div>
+                    <h4>Classic</h4>
+                    <img src="./imgs/bronie/sheriff.png" alt="bron">
+                    <p>Cena: 800$</p>
+                    <p>Celna broń z dużym damagem.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="turnieje_container" class="container">
+        <div class="container_header">
+            <img class="banner_image" src="./imgs/banery/banner2.png" alt="baner">
+            <div class="banner_title">
+                <p>Turnieje</p>
+            </div>
+        </div>
+        <section>
+            <h2>Turnieje w Valorant</h2>
+            <p>Turnieje w Valorancie są nazywanymi VCT. Podczas sezonu VCT zostają wybierane drużyny z każdego regionu świata w VCT Challengers. Najlepsze drużyny kwalifikują się do VCT Masters. Z tamtąd najlepsze drużyny dostają się do VCT Champions, czyli najbardziej prestiżowego turnieju Valorant. Cały sezon rogrywa się w 1 rok, oraz lokalizacje VCT Masters i Champions są w losowych miejscach na Ziemii. Dodatkowo są oddzielne, turnieje np. Game Changers, w którym mogą uczestniczyć tylko kobiety.</p>
+            <div style="text-align: center;">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mDiQOKtH-Bg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <hr class="container_seperator">
+            <h2>Ranking</h2>
+            <p>W Valorancie mamy też tryb rankinogwy, który jest dostępny dla wszystkich graczy. Co każde 100rr (punkty rankingowe) dostajemy rangę w górę, albo spadamy, jeżeli stracimi 100. Poniżej mamy tabele pokazującą drabinkę rang w Valorant.</p>
+            <div class="galeria">
+                <img src="./imgs/glowna/rangi.png" alt="rangi" id="rangi_img">
+            </div>
+            <p>Obecnie w Radiancie może być max top 500 z każdego regionu, a w Imortalu 5 tysięci na tier globalnie.</p>
+        </section>
+    </div>
+
+    <input type="radio" name="pindex" id="kontakt_b">
+
+    <div id="kontakt_container" class="container">
+        <section>
+            <h2>Kontakt</h2>
+            <p>Napisz do mnie na tych aplikacjach:</p>
+            <div class="galeria">
+                <img src="./imgs/kontakt/discord.png" alt="kontakt" class="kontakt_img">
+                <img src="./imgs/kontakt/instagram.png" alt="kontakt" class="kontakt_img">
+                <img src="./imgs/kontakt/facebook.png" alt="kontakt" class="kontakt_img">
+                <a href="https://chomikuj.pl/vimw" target="_blank"><img src="./imgs/kontakt/chomikuj.png" alt="kontakt"></a>
+            </div>
+            <p>Lub napisz do mnie <a href="mailto:xavier.lechowski@zse.krakow.pl" class="nolink">e-mail</a>.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div style="line-height: 10rem;">
+            <p>&#169; Xavier Lechowski</p>
+        </div>
+        <div class="separator"></div>
+        <div style="line-height: 5rem;">
+            <label for="kontakt_b">Kontakt</label>
+            <p style="font-size: 2rem;">Strona nie jest spowiązana z Riot Games</p>
+        </div>
+    </footer>
+    <audio autoplay loop><source src="./sounds/valorant_background_audio.mp3" type="audio/mp3"></audio>
+</body>
+</html>
